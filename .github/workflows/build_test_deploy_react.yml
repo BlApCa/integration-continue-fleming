@@ -46,6 +46,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: pages
         uses: actions/configure-pages@v3
+      - name : check repo
+        run: ls
       - name : Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
