@@ -27,7 +27,13 @@ function App() {
             {successful && <Toastr setSuccessful={setSuccessful}/>}
 
             <div id="S">
-
+                <div id="L-H" className="handle">
+                    <div className="l_filter filter"></div>
+                    <div id="L-C" className="circle">
+                        <div className="border"></div>
+                    </div>
+                    <div id="Clicker-Btn" className="mybutton"></div>
+                </div>
             </div>
         </main>
     </div>
