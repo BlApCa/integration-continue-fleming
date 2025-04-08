@@ -34,6 +34,13 @@ function App() {
                     </div>
                     <div id="Clicker-Btn" className="mybutton"></div>
                 </div>
+                <div id="R-H" className="handle">
+                    <div className="r_filter filter"></div>
+                    <div id="R-C" className="circle">
+                        <div className="border"></div>
+                    </div>
+                </div>
+
             </div>
         </main>
     </div>
