@@ -51,55 +51,6 @@ function App() {
                         <h1>PokeShop</h1>
                         <input className="srchbar" type='search' placeholder='search'/>
                     </div>
-                    <div className="cards">
-                        <div className="card">
-                            <div className="cardHeader">
-                                <div className="cardPkmnId">n°1</div>
-                                <h3 className="cardPkmnName">Bulbizarre</h3>
-                                <div className="cardPkmnFav">♥</div>
-                            </div>
-                            <div className="cardContent">
-                                <img className="cardPkmnImg"
-                                     src="https://freepngimg.com/save/16235-pokemon-picture/1037x985" alt=""></img>
-                                <div className="cardPkmnListTypes">
-                                    <div className="cardPkmnType"></div>
-                                </div>
-                            </div>
-                            <div className="cardFooter">
-                                <div className="buyingCounter">
-                                    <div className="cardBtn">-</div>
-                                    <input className="inputBuyCount" type="number"/>
-                                    <div className="cardBtn">+</div>
-                                </div>
-                                <div className="cardBtn">buy</div>
-                            </div>
-                        </div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-                        <div className="card"></div>
-
-                    </div>
                 </div>
                 <div id="L-H" className="handle">
                     <div className="l_filter filter"></div>
