@@ -1,8 +1,8 @@
 {
   "name": "integration-continue-fleming",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
-  "homepage": "",
+  "homepage": "https://blapca.github.io/integration-continue-fleming/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
