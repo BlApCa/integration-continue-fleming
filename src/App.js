@@ -13,25 +13,25 @@ import './App.css';
 function App() {
   const [successful, setSuccessful] = useState(false);
 
-    const MyScreen = document.getElementById('S')
-    const MiniScreen = document.getElementById('MiniScreen')
-    let ActualTime = document.getElementById('ActualTime')
-    let ActualDate = document.getElementById('ActualDate')
-    let currentHours = new Date().getHours()
-    let currentMinutes = new Date().getMinutes()
-    currentMinutes < 10 ? currentMinutes = '0'+currentMinutes : null
-    let currentTime = `${currentHours}:${currentMinutes}`
-    console.log(currentTime)
-    let currentDate = new Date().toLocaleDateString('fr-FR')
-    let opened = true;
-
-    const pokedexOpener = (size,transition,opacity) =>
-        (MyScreen.style.width = size,MiniScreen.style.transition = transition,MiniScreen.style.opacity = opacity, opened = !opened)
-
-    const test = () =>
-        opened ?
-            (pokedexOpener('30vw','opacity 0.2s 0.4s','1'),ActualTime.append(currentTime), ActualDate.append(currentDate))
-            : pokedexOpener('90vw','opacity 0.1s','0')
+    // const MyScreen = document.getElementById('S')
+    // const MiniScreen = document.getElementById('MiniScreen')
+    // let ActualTime = document.getElementById('ActualTime')
+    // let ActualDate = document.getElementById('ActualDate')
+    // let currentHours = new Date().getHours()
+    // let currentMinutes = new Date().getMinutes()
+    // currentMinutes < 10 ? currentMinutes = '0'+currentMinutes : null
+    // let currentTime = `${currentHours}:${currentMinutes}`
+    // console.log(currentTime)
+    // let currentDate = new Date().toLocaleDateString('fr-FR')
+    // let opened = true;
+    //
+    // const pokedexOpener = (size,transition,opacity) =>
+    //     (MyScreen.style.width = size,MiniScreen.style.transition = transition,MiniScreen.style.opacity = opacity, opened = !opened)
+    //
+    // const test = () =>
+    //     opened ?
+    //         (pokedexOpener('30vw','opacity 0.2s 0.4s','1'),ActualTime.append(currentTime), ActualDate.append(currentDate))
+    //         : pokedexOpener('90vw','opacity 0.1s','0')
 
 
 
