@@ -14,7 +14,7 @@ function App() {
   const [successful, setSuccessful] = useState(false);
 
     const MyScreen = document.getElementById('S')
-    // const MiniScreen = document.getElementById('MiniScreen').style
+    const MiniScreen = document.getElementById('MiniScreen')
     let ActualTime = document.getElementById('ActualTime')
     let ActualDate = document.getElementById('ActualDate')
     let currentHours = new Date().getHours()
@@ -26,7 +26,7 @@ function App() {
     let opened = true;
 
     const pokedexOpener = (size,transition,opacity) =>
-        (MyScreen.style.width = size,MiniScreen.transition = transition,MiniScreen.opacity = opacity, opened = !opened)
+        (MyScreen.style.width = size,MiniScreen.style.transition = transition,MiniScreen.style.opacity = opacity, opened = !opened)
 
     const test = () =>
         opened ?
