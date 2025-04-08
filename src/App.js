@@ -14,7 +14,7 @@ function App() {
   const [successful, setSuccessful] = useState(false);
 
     const MyScreen = document.getElementById('S')
-    const MiniScreen = document.getElementById('MiniScreen').style
+    // const MiniScreen = document.getElementById('MiniScreen').style
     let ActualTime = document.getElementById('ActualTime')
     let ActualDate = document.getElementById('ActualDate')
     let currentHours = new Date().getHours()
