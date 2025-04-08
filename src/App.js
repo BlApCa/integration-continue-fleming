@@ -25,8 +25,13 @@ function App() {
     // let currentDate = new Date().toLocaleDateString('fr-FR')
     let opened = true;
 
-    const pokedexOpener = (size,transition,opacity) =>
-        (MyScreen.style.width = size,MiniScreen.style.transition = transition,MiniScreen.style.opacity = opacity, opened = !opened)
+    const pokedexOpener = (size,transition,opacity) => {
+        MyScreen.style.width = size;
+        MiniScreen.style.transition = transition;
+        MiniScreen.style.opacity = opacity;
+        opened = !opened;
+
+    }
 
     const test = () =>
         opened ?
