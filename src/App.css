@@ -68,3 +68,416 @@ button:disabled {
 button:hover:not(:disabled) {
   background-color: #45a049;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**  STYLE EN VRAC  **/
+
+
+
+body {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: url(https://vignette1.wikia.nocookie.net/minomonsters/images/0/01/Earth_Island_-_Prairie_Battle_bg.png/revision/latest?cb=20120714214726);
+  background-size:cover;
+  font-family:sans-serif;
+  margin:0
+}
+h1 {
+  color:rgb(255,255,255,0);
+  -webkit-text-stroke: 1px rgb(255,0,0,0.8);
+  text-stroke: 2px navy;
+}
+#S {
+  width:90vw;
+  height:30vw;
+  display:flex;
+  justify-content:space-between;
+  background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(168,245,255,0.6) 12%);
+  backdrop-filter: blur(3px) saturate(80%);
+  -webkit-backdrop-filter: blur(3px) saturate(80%);
+  box-shadow:inset 0px 0px 20px rgba(88,245,255,0.7),0px 0px 30px rgba(88,245,255,0.8);
+  border-radius:10px;
+  animation: sparkling 10s ease-in-out infinite;
+  transition: width 0.4s ease-in-out;
+}
+@keyframes sparkling {
+  0%{}
+  81%{}
+  81.1%{
+    background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(255,255,255,1) 11%, rgba(168,245,255,0.6) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  81.5%{
+    background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(255,255,255,1) 11%, rgba(168,245,255,0.6) 12%);
+    background-repeat:repeat;
+    background-size:3px 3px;
+  }
+  82%{}
+  93%{}
+  94%{
+    background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(255,255,255,1) 11%, rgba(168,245,255,0.6) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  97%{
+    background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(255,255,255,0.8) 11%, rgba(168,245,255,0.6) 12%);
+    background-repeat:repeat;
+    background-size:100px 1px;
+  }
+  99%{
+    background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(255,255,255,1) 11%, rgba(168,245,255,0.6) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  100%{}
+}
+#Content{
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  box-sizing:border-box;
+  padding: 15px calc(15vw + 15px);
+}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.srchbar {
+  margin-right: 30%;
+  width: 40%;
+  height: 40px;
+  background-color:rgb(220,230,240,0.5);
+  border:2px solid rgb(255,0,0,0.5);
+  border-radius:500px;
+}
+.cards {
+  width: 100%;
+  display:grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-auto-flow:column;
+  gap:8px;
+  align-items:center;
+  overflow-x:scroll;
+  padding:5px;
+}
+.card {
+  width: 11.3vmax;
+  height: 11.3vmax;
+  background-color:rgb(220,230,240,0.3);
+  border-radius:6px;
+  padding: 4px;
+  box-sizing:border-box;
+}
+.card:hover {
+  background-color:rgb(220,230,240,0.4);
+}
+.cardHeader{
+  width: 100%;
+  height: 15%;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 0 8px;
+  box-sizing:border-box;
+  color:rgb(0,0,0,0.7)
+}
+.cardPkmnId {
+  position:absolute;
+  top:2px;
+  left:2px;
+}
+.cardPkmnFav {
+  position:absolute;
+  top:2px;
+  right:8px;
+}
+.cardPkmnName {
+  margin:0;
+  font-size:0.9rem;
+}
+.cardContent{
+  width: 100%;
+  height: 70%;
+  display:flex;
+  flex-flow:column;
+  position:relative;
+}
+.cardPkmnImg {
+  width: 50%;
+  flex: 0 1 auto;
+  align-self:center;
+  opacity:0.5;
+  position:relative;
+}
+.cardPkmnListTypes {
+  flex: 1 1 auto;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.cardPkmnType {
+  width: 2vmax;
+  height: 2vmax;
+  border-radius:100px;
+  background:green;
+}
+.cardFooter{
+  width: 100%;
+  height: 15%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+.buyingCounter {
+  width: 45%;
+  display:flex;
+  border-radius:100px;
+  justify-content:space-between;
+  background:rgb(255,255,255,0.6);
+}
+.inputBuyCount, .inputBuyCount:active {
+  background:rgb(0,0,0,0);
+  border:none;
+  width: 30%;
+  outline:none;
+  -moz-appearance: textfield;
+  text-align:center;
+}
+.cardBtn {
+  width: 30%;
+  height: 100%;
+  border-radius:100px;
+  background:rgb(255,255,0,0.6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:rgb(0,0,255,0.8);
+  cursor:pointer;
+  font-weight:bold;
+}
+#MiniScreen{
+  width: 14vmax;
+  height: 14vmax;
+  position:absolute;
+  border-radius:100%;
+  left:calc(50% - 7vmax);
+  top:calc(50% - 7vmax);
+  z-index:50;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:rgb(0,0,255,0.7);
+  opacity:0;
+  transition: opacity 0.2s 0.4s;
+}
+
+.ms-filter {
+  width: 90%;
+  height: 90%;
+  position:absolute;
+  border-radius:100%;
+  /*   backdrop-filter: blur(1px) saturate(80%);
+    -webkit-backdrop-filter: blur(3px) saturate(80%); */
+}
+#ActualTime {
+  display:flex;
+  align-items:center;
+  font-size:2.5rem;
+  font-family:"Digital", sans-serif;
+  margin:0;
+  color:rgb(255,255,255,0);
+  -webkit-text-stroke: 1px rgb(0,0,255,0.8);
+  text-stroke: 2px navy;
+}
+#ActualDate {
+  margin:0;
+  color:grey;
+  font-size:0.9rem;
+}
+.handle{
+  width: 15vw;
+  height: 100%;
+  border-radius:15px;
+  position:absolute;
+  padding: 5px 0px;
+  top: -5px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+}
+#R-H {
+  right: 0;
+  border-bottom:1px solid rgb(30,10,10);
+  border-right:1px solid rgb(30,10,10);
+  background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 8%, rgba(210,1,1,1) 80%, rgba(139,0,0,1) 94%);
+  box-shadow:inset 0px 0px 20px rgb(40,10,10), 7px 7px 15px black;
+  border-top-left-radius:5px;
+  border-bottom-left-radius:5px;
+}
+#L-H {
+  justify-content: end;
+  border-bottom:1px solid rgb(30,10,10);
+  border-left:1px solid rgb(30,10,10);
+  background: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 8%, rgba(210,1,1,1) 80%, rgba(139,0,0,1) 94%);
+  box-shadow:inset 0px 0px 20px rgb(40,10,10), -7px 7px 15px black;
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+}
+
+.filter {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+}
+.l_filter {
+  background: linear-gradient(170deg, rgba(255,0,0,0) 16%, rgba(103,0,0,1) 17%, rgba(36,2,2,0.30) 18%, rgba(255,0,0,0) 21%);
+  background-size: 100% 12%;
+  background-position:center;
+  background-repeat:repeat;
+}
+.r_filter {
+  background: linear-gradient(190deg, rgba(255,0,0,0) 16%, rgba(103,0,0,1), rgba(36,2,2,0.30) 18%, rgba(255,0,0,0) 21%);
+  background-size:100% 12%;
+  background-position:center;
+  background-repeat:repeat;
+}
+
+.circle {
+  width: 14vmax ;
+  height: 14vmax ;
+  background: blue;
+  position:absolute;
+  border-radius:250px;
+  border:2px solid white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+  animation: sparkling2 10s ease-in-out infinite;
+  box-sizing:border-box;
+}
+#R-C{
+  left:-7vmax;
+}
+#L-C{
+  right:-7vmax;
+}
+.border {
+  width: 100%;
+  height: 100%;
+  border-radius: 250px;
+  border:10px solid black;
+  box-sizing:border-box;
+}
+
+.mybutton {
+  width: 3.5vmax;
+  height:3.5vmax;
+  border-radius:100%;
+  background:#f9ff00;
+  position:absolute;
+  box-shadow: inset 0px 0px 20px rgb(10,10,10,0.8);
+  transition: box-shadow 0.5s ;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.mybutton:hover, .mybutton:active {
+  box-shadow: inset 0px 0px 30px rgb(250,250,250,0.7), inset 0px 0px 10px ;
+  cursor:pointer;
+}
+#Cart-Btn {
+  bottom:20%;
+  left: 30%;
+}
+#Poke-Btn {
+  bottom:5%;
+  left:10%;
+}
+#Clicker-Btn{
+  bottom:20%;
+  right:30%;
+}
+.icon {
+  width: 2vmax;
+}
+@keyframes sparkling2 {
+  0%{}
+  81%{}
+  81.1%{
+    background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  81.5%{
+    background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+    background-repeat:repeat;
+    background-size:3px 3px;
+  }
+  82%{}
+  93%{}
+  94%{
+    background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  97%{
+    background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+    background-repeat:repeat;
+    background-size:100px 1px;
+  }
+  99%{
+    background: linear-gradient(120deg, rgba(168,255,255,1) 10%, rgba(255,255,255,1) 11%, rgba(168,255,255,1) 12%);
+    background-repeat:repeat;
+    background-size:1px 1px;
+  }
+  100%{}
+}
+
+/* width */
+.cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+/* Track */
+.cards::-webkit-scrollbar-track {
+  background-color:rgb(220,230,240,0.7);
+  border-radius:50px;
+}
+
+/* Handle */
+.cards::-webkit-scrollbar-thumb {
+  background: rgb(255,0,0,0.5);
+  border-radius:50px;
+}
+
+/* Handle on hover */
+.cards::-webkit-scrollbar-thumb:hover {
+  background: rgb(255,0,0,1);
+}
+
+/* Chrome, Safari, Edge, Opera */
+.inputBuyCount::-webkit-outer-spin-button,
+.inputBuyCount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
