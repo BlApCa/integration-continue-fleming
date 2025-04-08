@@ -22,7 +22,7 @@ function App() {
     // currentMinutes < 10 ? currentMinutes = '0'+currentMinutes : null
     // let currentTime = `${currentHours}:${currentMinutes}`
     // console.log(currentTime)
-    let currentDate = new Date().toLocaleDateString('fr-FR')
+    // let currentDate = new Date().toLocaleDateString('fr-FR')
     let opened = true;
 
     const pokedexOpener = (size,transition,opacity) =>
@@ -50,7 +50,7 @@ function App() {
                     <div id="L-C" className="circle">
                         <div className="border"></div>
                     </div>
-                    <div id="Clicker-Btn" className="mybutton"></div>
+                    <div id="Clicker-Btn" onClick={test} className="mybutton"></div>
                 </div>
                 <div id="MiniScreen">
                     <div className="ms-filter"></div>
