@@ -30,7 +30,7 @@ function App() {
 
     const test = () =>
         opened ?
-            (pokedexOpener('30vw','opacity 0.2s 0.4s','1'),ActualTime.append(currentTime), ActualDate.append(currentDate))
+            pokedexOpener('30vw','opacity 0.2s 0.4s','1')/**ActualTime.append(currentTime), ActualDate.append(currentDate)**/
             : pokedexOpener('90vw','opacity 0.1s','0')
 
 
