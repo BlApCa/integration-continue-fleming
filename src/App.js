@@ -27,28 +27,7 @@ function App() {
             {successful && <Toastr setSuccessful={setSuccessful}/>}
 
             <div id="S">
-                <div id="Content">
-                    <div className="header">
-                        <h1>PokeShop</h1>
-                    </div>
-                </div>
-                <div id="L-H" className="handle">
-                    <div className="l_filter filter"></div>
-                    <div id="L-C" className="circle">
-                        <div className="border"></div>
-                    </div>
-                </div>
-                <div id="MiniScreen">
-                    <div className="ms-filter"></div>
-                    <h1 id="ActualTime"></h1>
-                    <h3 id="ActualDate"></h3>
-                </div>
-                <div id="R-H" className="handle">
-                    <div className="r_filter filter"></div>
-                    <div id="R-C" className="circle">
-                        <div className="border"></div>
-                    </div>
-                </div>
+
             </div>
         </main>
     </div>
