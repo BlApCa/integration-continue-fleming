@@ -37,7 +37,6 @@ function App() {
                     <div id="L-C" className="circle">
                         <div className="border"></div>
                     </div>
-                    <div id="Clicker-Btn" className="mybutton"></div>
                 </div>
                 <div id="MiniScreen">
                     <div className="ms-filter"></div>
@@ -48,8 +47,6 @@ function App() {
                     <div className="r_filter filter"></div>
                     <div id="R-C" className="circle">
                         <div className="border"></div>
-                    </div>
-                    <div id="Poke-Btn" className="mybutton">
                     </div>
                 </div>
             </div>
