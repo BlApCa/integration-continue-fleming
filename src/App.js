@@ -17,11 +17,11 @@ function App() {
     const MiniScreen = document.getElementById('MiniScreen')
     // let ActualTime = document.getElementById('ActualTime')
     // let ActualDate = document.getElementById('ActualDate')
-    let currentHours = new Date().getHours()
-    let currentMinutes = new Date().getMinutes()
-    currentMinutes < 10 ? currentMinutes = '0'+currentMinutes : null
-    let currentTime = `${currentHours}:${currentMinutes}`
-    console.log(currentTime)
+    // let currentHours = new Date().getHours()
+    // let currentMinutes = new Date().getMinutes()
+    // currentMinutes < 10 ? currentMinutes = '0'+currentMinutes : null
+    // let currentTime = `${currentHours}:${currentMinutes}`
+    // console.log(currentTime)
     let currentDate = new Date().toLocaleDateString('fr-FR')
     let opened = true;
 
