@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import RegistrationForm from './components/forms/RegistrationForm';
 import Toastr from './components/toastr/Toastr';
 import './App.css';
-import {minimatch} from "cypress/types/cy-minimatch";
 
 /**
  * The main application component that renders the registration form and a toastr notification
