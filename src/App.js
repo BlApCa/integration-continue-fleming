@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import RegistrationForm from './components/forms/RegistrationForm';
 import Toastr from './components/toastr/Toastr';
 import './App.css';
+import {minimatch} from "cypress/types/cy-minimatch";
 
 /**
  * The main application component that renders the registration form and a toastr notification
@@ -26,6 +27,7 @@ function App() {
     let opened = true;
 
     const pokedexOpener = (size,transition,opacity) => {
+        console.log(MyScreen, MiniScreen)
         MyScreen.style.width = size;
         MiniScreen.style.transition = transition;
         MiniScreen.style.opacity = opacity;
