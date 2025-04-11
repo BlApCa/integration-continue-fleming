@@ -2,12 +2,11 @@
   text-align: center;
   padding: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
-  margin-bottom: 30px;
+main {
+  width: 100%;
+  padding: 0 15vw;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .registration-form {
@@ -92,19 +91,20 @@ body {
   display:flex;
   justify-content:center;
   align-items:center;
-  background: url(https://vignette1.wikia.nocookie.net/minomonsters/images/0/01/Earth_Island_-_Prairie_Battle_bg.png/revision/latest?cb=20120714214726);
+  background: url(../public/fondTPSOLO.png);
   background-size:cover;
   font-family:sans-serif;
   margin:0
 }
 h1 {
   color:rgb(255,255,255,0);
-  -webkit-text-stroke: 1px rgb(255,0,0,0.8);
-  text-stroke: 2px navy;
+  text-align: center;
+  -webkit-text-stroke: 1px rgba(12, 56, 96,.8);
+  text-stroke: 1px rgba(12, 56, 96,.8);
 }
 #S {
-  width:90vw;
-  height:30vw;
+  width:30vw;
+  height:80vh;
   display:flex;
   justify-content:space-between;
   background: linear-gradient(120deg, rgba(168,245,255,0.6) 10%, rgba(168,245,255,0.6) 12%);
@@ -147,131 +147,11 @@ h1 {
   }
   100%{}
 }
-#Content{
-  width: 100%;
-  height: 100%;
-  position:absolute;
-  box-sizing:border-box;
-  padding: 15px calc(15vw + 15px);
-}
+
 .header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-.srchbar {
-  margin-right: 30%;
-  width: 40%;
-  height: 40px;
-  background-color:rgb(220,230,240,0.5);
-  border:2px solid rgb(255,0,0,0.5);
-  border-radius:500px;
-}
-.cards {
-  width: 100%;
-  display:grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-flow:column;
-  gap:8px;
-  align-items:center;
-  overflow-x:scroll;
-  padding:5px;
-}
-.card {
-  width: 11.3vmax;
-  height: 11.3vmax;
-  background-color:rgb(220,230,240,0.3);
-  border-radius:6px;
-  padding: 4px;
-  box-sizing:border-box;
-}
-.card:hover {
-  background-color:rgb(220,230,240,0.4);
-}
-.cardHeader{
-  width: 100%;
-  height: 15%;
-  position:relative;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding: 0 8px;
-  box-sizing:border-box;
-  color:rgb(0,0,0,0.7)
-}
-.cardPkmnId {
-  position:absolute;
-  top:2px;
-  left:2px;
-}
-.cardPkmnFav {
-  position:absolute;
-  top:2px;
-  right:8px;
-}
-.cardPkmnName {
-  margin:0;
-  font-size:0.9rem;
-}
-.cardContent{
-  width: 100%;
-  height: 70%;
-  display:flex;
-  flex-flow:column;
-  position:relative;
-}
-.cardPkmnImg {
-  width: 50%;
-  flex: 0 1 auto;
-  align-self:center;
-  opacity:0.5;
-  position:relative;
-}
-.cardPkmnListTypes {
-  flex: 1 1 auto;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-}
-.cardPkmnType {
-  width: 2vmax;
-  height: 2vmax;
-  border-radius:100px;
-  background:green;
-}
-.cardFooter{
-  width: 100%;
-  height: 15%;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
-}
-.buyingCounter {
-  width: 45%;
-  display:flex;
-  border-radius:100px;
-  justify-content:space-between;
-  background:rgb(255,255,255,0.6);
-}
-.inputBuyCount, .inputBuyCount:active {
-  background:rgb(0,0,0,0);
-  border:none;
-  width: 30%;
-  outline:none;
-  -moz-appearance: textfield;
-  text-align:center;
-}
-.cardBtn {
-  width: 30%;
-  height: 100%;
-  border-radius:100px;
-  background:rgb(255,255,0,0.6);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  color:rgb(0,0,255,0.8);
-  cursor:pointer;
-  font-weight:bold;
 }
 #MiniScreen{
   width: 14vmax;
@@ -286,7 +166,7 @@ h1 {
   justify-content:center;
   align-items:center;
   color:rgb(0,0,255,0.7);
-  opacity:0;
+  opacity:1;
   transition: opacity 0.2s 0.4s;
 }
 
@@ -295,8 +175,14 @@ h1 {
   height: 90%;
   position:absolute;
   border-radius:100%;
-  /*   backdrop-filter: blur(1px) saturate(80%);
-    -webkit-backdrop-filter: blur(3px) saturate(80%); */
+  background-image: url(../public/Equitech_Seul_Noir.png);
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(0.5px) opacity(.9);
+  -webkit-filter: blur(0.5px) opacity(.9);
+
+  background-color: #6c6c6c;
 }
 #ActualTime {
   display:flex;
@@ -328,7 +214,7 @@ h1 {
   right: 0;
   border-bottom:1px solid rgb(30,10,10);
   border-right:1px solid rgb(30,10,10);
-  background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 8%, rgba(210,1,1,1) 80%, rgba(139,0,0,1) 94%);
+  background: linear-gradient(170deg, #9becdd 0%, #2BA985 8%, #126c52 80%, #03573f 94%);
   box-shadow:inset 0px 0px 20px rgb(40,10,10), 7px 7px 15px black;
   border-top-left-radius:5px;
   border-bottom-left-radius:5px;
@@ -337,7 +223,7 @@ h1 {
   justify-content: end;
   border-bottom:1px solid rgb(30,10,10);
   border-left:1px solid rgb(30,10,10);
-  background: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(255,0,0,1) 8%, rgba(210,1,1,1) 80%, rgba(139,0,0,1) 94%);
+  background: linear-gradient(190deg, #9becdd 0%, #2BA985 8%, #126c52 80%, #03573f 94%);
   box-shadow:inset 0px 0px 20px rgb(40,10,10), -7px 7px 15px black;
   border-top-right-radius:5px;
   border-bottom-right-radius:5px;
