@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-import RegistrationForm from './components/forms/RegistrationForm';
-import Toastr from './components/toastr/Toastr';
+import React from 'react';
 import './App.css';
 import {Device} from "./components/device/Device";
 
