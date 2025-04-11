@@ -23,7 +23,7 @@ export const Device = () => {
         if (!opened) {
             pokedexOpener('90vw', 'opacity 0.1s', '0');
         } else {
-            pokedexOpener('30vw', 'opacity 0.2s 0.4s', '1');
+            pokedexOpener('30vw', 'opacity 0.7s 0.4s', '1');
         }
         setOpened(!opened);
     };
