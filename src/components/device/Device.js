@@ -4,6 +4,8 @@ import {MiniScreen} from "./mini_screen/MiniScreen";
 import {RightHandle} from "./right_handle/RightHandle";
 import RegistrationForm from "../forms/RegistrationForm";
 import Toastr from "../toastr/Toastr";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import AdminLogin from "../admin/AdminLogin";
 
 export const Device = () => {
     const [successful, setSuccessful] = useState(false);
@@ -31,13 +33,20 @@ export const Device = () => {
         <div id="S" ref={screenRef}>
             <LeftHandle onClick={toggleDevice}/>
             <MiniScreen ref={miniScreenRef}/>
-            <main>
-                <header className="App-header">
-                    <h1>Formulaire d'enregistrement</h1>
-                </header>
-                <RegistrationForm setSuccessful={setSuccessful}/>
-                {successful && <Toastr setSuccessful={setSuccessful}/>}
-            </main>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={
+                        <main>
+                            <header className="App-header">
+                                <h1>Formulaire d'enregistrement</h1>
+                            </header>
+                            <RegistrationForm setSuccessful={setSuccessful}/>
+                            {successful && <Toastr setSuccessful={setSuccessful}/>}
+                        </main>
+                    }/>
+                    <Route path="/admin" element={<AdminLogin onLoginSuccess={() => <UserList/>}/>}/>
+                </Routes>
+            </BrowserRouter>
             <RightHandle/>
         </div>
     )

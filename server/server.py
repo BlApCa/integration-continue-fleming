@@ -17,6 +17,10 @@ class User(BaseModel):
     city: Optional[str] = None
     postal_code: Optional[str] = None
 
+class AdminCredentials(BaseModel):
+    email: str
+    password: str
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -38,9 +42,22 @@ def get_db():
     except mysql.connector.Error as err:
         raise HTTPException(status_code=500, detail=f"Database connection failed: {err}")
 
-@app.get("/")
-async def root():
-    return {"message": "API is running"}
+@app.post("/admin/login")
+async def admin_login(credentials: AdminCredentials):
+    conn = get_db()
+    cursor = conn.cursor(dictionary=True)
+    try:
+        cursor.execute("""
+            SELECT * FROM users
+            WHERE email = %s AND password = %s AND is_admin = TRUE
+        """, (credentials.email, credentials.password))
+        user = cursor.fetchone()
+        if user:
+            return {"success": True}
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+    finally:
+        cursor.close()
+        conn.close()
 
 @app.post("/users")
 async def create_user(user: User):
@@ -74,10 +91,20 @@ async def get_users(admin: bool = False):
         conn.close()
 
 @app.delete("/users/{user_id}")
-async def delete_user(user_id: int):
+async def delete_user(user_id: int, credentials: AdminCredentials):
     conn = get_db()
-    cursor = conn.cursor()
+    cursor = conn.cursor(dictionary=True)
     try:
+        # Verify admin credentials
+        cursor.execute("""
+            SELECT * FROM users
+            WHERE email = %s AND password = %s AND is_admin = TRUE
+        """, (credentials.email, credentials.password))
+        admin = cursor.fetchone()
+        if not admin:
+            raise HTTPException(status_code=401, detail="Invalid admin credentials")
+
+        # Delete user
         cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
         conn.commit()
         return {"message": "User deleted successfully"}
