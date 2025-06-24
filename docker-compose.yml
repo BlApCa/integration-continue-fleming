@@ -11,6 +11,8 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    ports:
+      - "3306:3306"
 
   adminer:
     image: adminer
@@ -36,10 +38,10 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfileReact
     env_file: .env
     volumes:
-      - ./src:/app/src
+      - ./client:/app
     ports:
       - "3000:3000"
     depends_on:
