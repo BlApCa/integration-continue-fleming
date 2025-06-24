@@ -112,6 +112,26 @@ async def delete_user(user_id: int, credentials: AdminCredentials):
         cursor.close()
         conn.close()
 
+@app.delete("/users/{user_id}")
+async def delete_user(user_id: int, credentials: AdminCredentials):
+    conn = get_db()
+    cursor = conn.cursor(dictionary=True)
+    try:
+        cursor.execute("""
+            SELECT * FROM users
+            WHERE email = %s AND password = %s AND is_admin = TRUE
+        """, (credentials.email, credentials.password))
+        admin = cursor.fetchone()
+        if not admin:
+            raise HTTPException(status_code=401, detail="Invalid admin credentials")
+
+        cursor.execute("DELETE FROM users WHERE id = %s", (user_id,))
+        conn.commit()
+        return {"message": "User deleted successfully"}
+    finally:
+        cursor.close()
+        conn.close()
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

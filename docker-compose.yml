@@ -38,7 +38,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: dockerfileReact
+      dockerfile: client/DockerfileReact
     env_file: .env
     volumes:
       - ./client:/app
