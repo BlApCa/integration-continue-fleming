@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1744011894902" clover="3.2.0">
+  <project timestamp="1744011894903" name="All files">
+    <metrics statements="77" coveredstatements="77" conditionals="57" coveredconditionals="57" methods="17" coveredmethods="17" elements="151" coveredelements="151" complexity="0" loc="77" ncloc="77" packages="4" files="6" classes="6"/>
+    <package name="src">
+      <metrics statements="27" coveredstatements="27" conditionals="14" coveredconditionals="14" methods="4" coveredmethods="4"/>
+      <file name="App.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\App.js">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+      </file>
+      <file name="api.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\api.js">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+      </file>
+      <file name="module.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\module.js">
+        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="1" coveredmethods="1"/>
+        <line num="10" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="15" count="15" type="cond" truecount="4" falsecount="0"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="20" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="5" type="stmt"/>
+        <line num="30" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.forms">
+      <metrics statements="17" coveredstatements="17" conditionals="26" coveredconditionals="26" methods="4" coveredmethods="4"/>
+      <file name="RegistrationForm.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\components\forms\RegistrationForm.js">
+        <metrics statements="17" coveredstatements="17" conditionals="26" coveredconditionals="26" methods="4" coveredmethods="4"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="26" type="stmt"/>
+        <line num="31" count="26" type="stmt"/>
+        <line num="33" count="26" type="stmt"/>
+        <line num="34" count="11" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
+        <line num="41" count="26" type="stmt"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="43" count="7" type="stmt"/>
+        <line num="45" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="61" count="1" type="stmt"/>
+        <line num="63" count="6" type="stmt"/>
+        <line num="68" count="26" type="stmt"/>
+        <line num="70" count="26" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.toastr">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="Toastr.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\components\toastr\Toastr.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.utils">
+      <metrics statements="31" coveredstatements="31" conditionals="17" coveredconditionals="17" methods="7" coveredmethods="7"/>
+      <file name="validation.js" path="C:\Users\Flemi\Downloads\TP-Solo\TP-Solo\src\components\utils\validation.js">
+        <metrics statements="31" coveredstatements="31" conditionals="17" coveredconditionals="17" methods="7" coveredmethods="7"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="20" type="stmt"/>
+        <line num="8" count="20" type="stmt"/>
+        <line num="9" count="20" type="stmt"/>
+        <line num="10" count="20" type="stmt"/>
+        <line num="12" count="20" type="cond" truecount="5" falsecount="0"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="16" count="20" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="22" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="39" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="20" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="60" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="16" type="stmt"/>
+        <line num="63" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="64" count="7" type="stmt"/>
+        <line num="67" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="68" count="7" type="stmt"/>
+        <line num="71" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="72" count="7" type="stmt"/>
+        <line num="75" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="76" count="7" type="stmt"/>
+        <line num="79" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="80" count="7" type="stmt"/>
+        <line num="83" count="16" type="cond" truecount="2" falsecount="0"/>
+        <line num="84" count="11" type="stmt"/>
+        <line num="87" count="16" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
