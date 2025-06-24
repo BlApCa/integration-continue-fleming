@@ -6,6 +6,7 @@ import RegistrationForm from "../forms/RegistrationForm";
 import Toastr from "../toastr/Toastr";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import AdminLogin from "../admin/AdminLogin";
+import UserList from "../admin/UserList";
 
 export const Device = () => {
     const [successful, setSuccessful] = useState(false);
