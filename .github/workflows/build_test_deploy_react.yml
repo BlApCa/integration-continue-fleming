@@ -29,41 +29,28 @@ jobs:
 
   e2e:
     runs-on: ubuntu-latest
-    services:
-      mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_DATABASE: app_db
-          MYSQL_USER: admin
-          MYSQL_PASSWORD: PvdrTAzTeR247sDnAZBr
-          MYSQL_ROOT_PASSWORD: PvdrTAzTeR247sDnAZBr
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
 
-      - name: Install Python Dependencies
+      - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install fastapi uvicorn mysql-connector-python
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '21.x'
-
-      - name: Install Node Dependencies
-        run: npm ci
+          pip install -r server/requirements.txt
+          npm ci
 
       - name: Run Cypress Tests
         uses: cypress-io/github-action@v6
+        env:
+          MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
+          MYSQL_USER: ${{ secrets.MYSQL_USER }}
+          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+          MYSQL_DATABASE: ${{ secrets.MYSQL_DATABASE }}
+          MYSQL_PORT: ${{ secrets.MYSQL_PORT }}
         with:
           start: |
             python server/server.py &
